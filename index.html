@@ -453,6 +453,63 @@
       letter-spacing: 0.03em;
     }
 
+    /* ── PRODUCTS ── */
+    .product-list {
+      margin: 2rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+    .product-item {
+      display: flex;
+      gap: 1.25rem;
+      align-items: flex-start;
+      border-bottom: 1px solid rgba(42,31,14,0.12);
+      padding-bottom: 1.25rem;
+    }
+    .product-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    .product-thumb {
+      width: 72px;
+      height: 72px;
+      object-fit: contain;
+      flex-shrink: 0;
+      background: var(--paper-dark);
+    }
+    .product-info { flex: 1; }
+    .product-info a {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--red);
+      text-decoration: none;
+    }
+    .product-info a:hover { text-decoration: underline; }
+    .product-info p {
+      font-size: 0.88rem;
+      line-height: 1.6;
+      margin-top: 0.2rem;
+      color: var(--muted);
+    }
+    .product-splurge {
+      background: var(--paper-dark);
+      border-top: 4px solid var(--gold);
+      padding: 1.5rem;
+      margin-top: 2rem;
+      display: flex;
+      gap: 1.25rem;
+      align-items: flex-start;
+    }
+    .product-splurge .product-info a {
+      font-size: 1.05rem;
+    }
+    .product-splurge .product-thumb {
+      width: 90px;
+      height: 90px;
+    }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 600px) {
       .lede { padding: 1.75rem 1.25rem; }
@@ -484,8 +541,8 @@
     <a href="#history">History</a>
     <a href="#origin">How It Started</a>
     <a href="#celebrate">Why Celebrate</a>
-    <a href="#18th">18th Amendment</a>
-    <a href="#21st">21st Amendment</a>
+    <a href="#how-to-celebrate">Shop</a>
+    <a href="#18th">The Amendments</a>
   </nav>
 
   <!-- MAIN CONTENT -->
@@ -571,6 +628,85 @@
           <p>No costume. No green river. No obligations whatsoever. Go to your local bar and have a drink. Pick up a six-pack on the way home. Open a bottle with someone you like. That's the whole thing. That's the holiday.</p>
         </div>
       </div>
+    </section>
+
+    <!-- HOW TO CELEBRATE -->
+    <section id="how-to-celebrate" aria-labelledby="celebrate-how-heading">
+      <div class="section-divider" aria-hidden="true"><span class="ornament">✦</span></div>
+      <h2 class="section-head" id="celebrate-how-heading" aria-label="How to Celebrate"><em aria-hidden="true">Make It Official</em>How to Celebrate</h2>
+
+      <div class="body-text" style="margin-bottom: 1.5rem;">
+        <p>The simplest way to mark the occasion is also the most fitting: make a proper Old Fashioned at home. It's the cocktail that survived Prohibition in spirit if not in practice — a straightforward mix of whiskey, bitters, sugar, and ice that rewards good technique and good tools. Here's everything you need.</p>
+      </div>
+
+      <div class="product-list">
+
+        <div class="product-item">
+          <img class="product-thumb" src="the-bar-book.jpg" alt="The Bar Book by Jeffrey Morgenthaler" />
+          <div class="product-info">
+            <a href="https://amzn.to/3NLXPSD" target="_blank" rel="noopener">The Bar Book: Elements of Cocktail Technique — Jeffrey Morgenthaler</a>
+            <p>The only cocktail book that focuses on how to make drinks rather than just what to put in them. Start here.</p>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <img class="product-thumb" src="mixing-glass.png" alt="Cocktail mixing glass" />
+          <div class="product-info">
+            <a href="https://amzn.to/4bFPwzU" target="_blank" rel="noopener">Mixing Glass</a>
+            <p>A weighted, seamless mixing glass gives you control and stability. Essential for a properly stirred Old Fashioned.</p>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <img class="product-thumb" src="bar-spoon.png" alt="Teardrop cocktail spoon" />
+          <div class="product-info">
+            <a href="https://amzn.to/4lKgBGI" target="_blank" rel="noopener">Teardrop Cocktail Spoon</a>
+            <p>A long-handled bar spoon lets you stir with precision and control. The difference between a good stirred drink and a great one.</p>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <img class="product-thumb" src="jigger.png" alt="Cocktail Kingdom jigger" />
+          <div class="product-info">
+            <a href="https://amzn.to/3PfWzHP" target="_blank" rel="noopener">Jigger</a>
+            <p>Measure your pours. Every good bartender does. A well-made jigger is one of those tools you'll use every single time.</p>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <img class="product-thumb" src="strainer.png" alt="Julep strainer" />
+          <div class="product-info">
+            <a href="https://amzn.to/4sYpi2x" target="_blank" rel="noopener">Julep Strainer</a>
+            <p>A good Julep strainer keeps the ice where it belongs — in the mixing glass, not the drink.</p>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <img class="product-thumb" src="bitters.png" alt="Angostura aromatic and orange bitters" />
+          <div class="product-info">
+            <a href="https://amzn.to/4sQXM6T" target="_blank" rel="noopener">Angostura Aromatic &amp; Orange Bitters</a>
+            <p>The aromatic is the backbone of an Old Fashioned. The orange adds a bright, citrusy counterpoint. Keep both on hand and you've covered most classic cocktails.</p>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <img class="product-thumb" src="old-fashioned-glasses.png" alt="Old Fashioned glasses" />
+          <div class="product-info">
+            <a href="https://amzn.to/4uALpgP" target="_blank" rel="noopener">Spiegelau Old Fashioned Glasses, Set of 4</a>
+            <p>A proper rocks glass makes the whole thing feel like an occasion. Which, on December 5th, it is. This set of four means you can invite friends.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="product-splurge">
+        <img class="product-thumb" src="bar-cart.png" alt="Brass and walnut bar cart" />
+        <div class="product-info">
+          <a href="https://amzn.to/4bFU1KO" target="_blank" rel="noopener">Go All In: A Proper Bar Cart</a>
+          <p>If Repeal Day has you reconsidering your home bar situation entirely — and it should — a well-chosen bar cart is the move. Stock it right and you'll never be unprepared on December 5th again.</p>
+        </div>
+      </div>
+
     </section>
 
     <!-- AMENDMENTS -->
