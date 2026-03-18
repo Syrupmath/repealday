@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Repeal Day® — December 5th</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink: #1a1208;
+      --paper: #f5edd8;
+      --paper-dark: #e8dcc0;
+      --red: #8b1a1a;
+      --gold: #b8860b;
+      --rule: #2a1f0e;
+      --muted: #5a4a30;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--paper);
+      color: var(--ink);
+      font-family: 'Libre Baskerville', Georgia, serif;
+      font-size: 17px;
+      line-height: 1.75;
+      background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    }
+
+    /* ── MASTHEAD ── */
+    header {
+      background-color: var(--ink);
+      color: var(--paper);
+      text-align: center;
+      padding: 0;
+      border-bottom: 6px double var(--gold);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .masthead-rule {
+      height: 3px;
+      background: repeating-linear-gradient(90deg, var(--gold) 0, var(--gold) 8px, transparent 8px, transparent 14px);
+      margin: 0;
+    }
+
+    .header-inner {
+      padding: 3rem 2rem 2.5rem;
+    }
+
+    .dateline {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.2rem;
+    }
+
+    h1.masthead-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(3.5rem, 10vw, 7.5rem);
+      font-weight: 900;
+      line-height: 0.9;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      color: var(--paper);
+      margin-bottom: 0.5rem;
+    }
+
+    h1.masthead-title span.red {
+      color: var(--red);
+      display: block;
+      font-style: italic;
+      font-size: 0.45em;
+      letter-spacing: 0.05em;
+    }
+
+    .masthead-date {
+      display: inline-block;
+      font-family: 'IM Fell English', serif;
+      font-size: clamp(1.1rem, 3vw, 1.6rem);
+      color: var(--gold);
+      border-top: 1px solid var(--gold);
+      border-bottom: 1px solid var(--gold);
+      padding: 0.4rem 2rem;
+      margin-top: 1rem;
+      letter-spacing: 0.1em;
+    }
+
+    /* ── MAIN LAYOUT ── */
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 1.5rem 4rem;
+    }
+
+    /* ── SECTION RULES ── */
+    .section-divider {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin: 3rem 0 2rem;
+    }
+    .section-divider::before,
+    .section-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--rule);
+      opacity: 0.3;
+    }
+    .section-divider .ornament {
+      color: var(--gold);
+      font-size: 1.4rem;
+      line-height: 1;
+    }
+
+    /* ── LEDE BLOCK ── */
+    .lede {
+      background-color: var(--ink);
+      color: var(--paper);
+      padding: 2.5rem 2.5rem;
+      margin: 2.5rem 0;
+      border-left: 5px solid var(--red);
+      position: relative;
+    }
+    .lede::before {
+      content: '\201C';
+      font-family: 'Playfair Display', serif;
+      font-size: 8rem;
+      color: var(--red);
+      opacity: 0.25;
+      position: absolute;
+      top: -1.5rem;
+      left: 1rem;
+      line-height: 1;
+    }
+    .lede p {
+      font-family: 'IM Fell English', serif;
+      font-size: 1.2rem;
+      line-height: 1.7;
+      font-style: italic;
+    }
+
+    /* ── BODY TEXT ── */
+    .body-text p {
+      margin-bottom: 1.4rem;
+      text-align: justify;
+      hyphens: auto;
+    }
+    .body-text p:first-child::first-letter {
+      font-family: 'Playfair Display', serif;
+      font-size: 4rem;
+      font-weight: 900;
+      line-height: 0.8;
+      float: left;
+      margin: 0.1em 0.1em 0 0;
+      color: var(--red);
+    }
+
+    /* ── PULL QUOTE ── */
+    .pull-quote {
+      border-top: 3px solid var(--rule);
+      border-bottom: 3px solid var(--rule);
+      padding: 1.5rem 0;
+      margin: 2.5rem 0;
+      text-align: center;
+    }
+    .pull-quote p {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.2rem, 3vw, 1.65rem);
+      font-style: italic;
+      line-height: 1.4;
+      color: var(--red);
+    }
+
+    /* ── REASONS GRID ── */
+    .reasons {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    .reason-card {
+      background: var(--paper-dark);
+      border-top: 4px solid var(--red);
+      padding: 1.5rem;
+    }
+    .reason-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.75rem;
+      color: var(--rule);
+    }
+    .reason-card p {
+      font-size: 0.92rem;
+      line-height: 1.65;
+      color: var(--muted);
+    }
+
+    /* ── AMENDMENTS ── */
+    .amendments {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    @media (max-width: 600px) {
+      .amendments { grid-template-columns: 1fr; }
+    }
+    .amendment {
+      border: 1px solid rgba(42,31,14,0.25);
+      padding: 1.75rem;
+    }
+    .amendment.repeal {
+      background: var(--ink);
+      color: var(--paper);
+      border-color: var(--gold);
+    }
+    .amendment h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.3rem;
+    }
+    .amendment.repeal h3 { color: var(--gold); }
+    .amendment .amend-date {
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 1.2rem;
+      opacity: 0.6;
+    }
+    .amendment section-num {
+      display: block;
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin: 1rem 0 0.3rem;
+      opacity: 0.55;
+    }
+    .amendment p {
+      font-size: 0.9rem;
+      line-height: 1.65;
+    }
+    .amendment.repeal p { opacity: 0.85; }
+
+    /* ── SECTION HEADINGS ── */
+    h2.section-head {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      font-weight: 900;
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+      color: var(--rule);
+    }
+    h2.section-head em {
+      display: block;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 0.55em;
+      color: var(--gold);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 0.25rem;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--ink);
+      color: var(--paper);
+      text-align: center;
+      padding: 2.5rem 1.5rem;
+      border-top: 4px double var(--gold);
+    }
+    footer p {
+      font-size: 0.82rem;
+      opacity: 0.65;
+      margin-bottom: 0.4rem;
+      line-height: 1.7;
+    }
+    footer a { color: var(--gold); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    footer .footer-ornament {
+      color: var(--gold);
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    /* ── NAV ── */
+    nav {
+      background: var(--rule);
+      border-bottom: 2px solid var(--gold);
+      padding: 0.6rem 1.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: var(--gold);
+      text-decoration: none;
+      font-family: 'Libre Baskerville', serif;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+    }
+    nav a:hover { color: var(--paper); }
+
+    /* ── ENTRANCE ANIMATION ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .header-inner > * {
+      animation: fadeUp 0.8s ease both;
+    }
+    .dateline       { animation-delay: 0.1s; }
+    h1.masthead-title { animation-delay: 0.25s; }
+    .masthead-date  { animation-delay: 0.45s; }
+
+    /* ── BADGE ── */
+    .badge {
+      display: inline-block;
+      background: var(--red);
+      color: var(--paper);
+      font-family: 'Playfair Display', serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      padding: 0.25rem 0.8rem;
+      margin-bottom: 1rem;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      .lede { padding: 1.75rem 1.25rem; }
+      main { padding: 0 1rem 3rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- MASTHEAD -->
+  <header>
+    <div class="masthead-rule"></div>
+    <div class="header-inner">
+      <p class="dateline">Est. December 5, 1933 &nbsp;·&nbsp; A Constitutional Holiday</p>
+      <h1 class="masthead-title">
+        <span class="red">Celebrate</span>
+        Repeal Day
+        <sup style="font-size:0.2em; vertical-align:super; color:var(--gold);">®</sup>
+      </h1>
+      <p class="masthead-date">December Fifth</p>
+    </div>
+    <div class="masthead-rule"></div>
+  </header>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#history">History</a>
+    <a href="#celebrate">Why Celebrate</a>
+    <a href="#18th">18th Amendment</a>
+    <a href="#21st">21st Amendment</a>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main>
+
+    <!-- LEDE -->
+    <div class="lede" style="margin-top: 3rem;">
+      <p>On December 5th, 1933, America came to its senses — and raised a glass. Repeal Day® is the only holiday written into the Constitution, and the only one worth celebrating with a drink in hand.</p>
+    </div>
+
+    <!-- HISTORY -->
+    <section id="history">
+      <div class="section-divider"><span class="ornament">✦</span></div>
+      <h2 class="section-head"><em>The Story</em>What Is Repeal Day?</h2>
+
+      <div class="body-text">
+        <p>The turn of the twentieth century was a dark time in America. The Women's Christian Temperance Union, which had been promoting Prohibition for many years, believed alcohol was the cause of many, if not all, social ills. Mistruths like this were spread. Lines were drawn. Bars and taverns were vandalized. People were killed. On January 16th, 1919, Congress passed the Eighteenth Amendment, outlawing alcohol and ostensibly putting an end to drunkenness, crime, mental illness, and poverty.</p>
+
+        <p>Ironically, America's thirst for alcohol increased during Prohibition, and organized crime rose up to replace formerly legal methods of production and distribution. While proponents of Prohibition argued that the amendment would be more effective if enforcement were increased, respect for the law diminished and drunkenness, crime and resentment towards the federal government ran rampant.</p>
+
+        <p>Over the course of the next thirteen years, support for Prohibition waned as the nation awoke to the widespread problems it had caused. The number of repeal organizations — many of which were comprised of former Prohibitionists — increased, and in 1932 Franklin Delano Roosevelt ran for President on a platform that included the repeal of Prohibition.</p>
+
+        <p>On December 5th, 1933, Utah, the final state needed for a three-quarters majority, ratified the 21st Amendment, repealing Prohibition and restoring the American right to a celebratory drink. While the amendment still allowed for state and local levels of Prohibition, by 1966 there were no state laws banning alcohol.</p>
+      </div>
+    </section>
+
+    <!-- PULL QUOTE -->
+    <div class="pull-quote">
+      <p>"We celebrate the return to craft, to community, and to the constitutional right to raise a glass."</p>
+    </div>
+
+    <!-- WHY CELEBRATE -->
+    <section id="celebrate">
+      <div class="section-divider"><span class="ornament">✦</span></div>
+      <h2 class="section-head"><em>The Case For It</em>Why Do We Celebrate?</h2>
+
+      <div class="body-text" style="margin-bottom: 2rem;">
+        <p>The thirteen years of Prohibition were a dark time for the United States. The criminalization of alcohol led not only to a rise in civil delinquency and organized crime, but to the loss of customs associated with the production, preparation, and consumption of alcohol.</p>
+        <p>We celebrate Repeal Day® because December 5th marks a return to the rich traditions of craft fermentation and distillation, the legitimacy of the American bartender as a contributor to the culinary arts, and the responsible enjoyment of alcohol as a sacred social custom.</p>
+      </div>
+
+      <div class="reasons">
+        <div class="reason-card">
+          <h3>The Perfect Time of Year</h3>
+          <p>Conveniently located halfway between Thanksgiving and Christmas — when most Americans aren't spending time with family — Repeal Day® is a wonderful occasion to gather with friends and pay tribute to our constitutional rights.</p>
+        </div>
+        <div class="reason-card">
+          <h3>It's Constitutional</h3>
+          <p>Unlike St. Patrick's Day or Cinco de Mayo, Repeal Day® is a day that all Americans share, because it's written into our Constitution. No other holiday celebrates the laws that guarantee our rights.</p>
+        </div>
+        <div class="reason-card">
+          <h3>It's Easy</h3>
+          <p>No outfits to buy, costumes to rent, or rivers to dye green. Simply stop by your local bar, tavern, saloon, winery, distillery, or brewhouse. Pick up a six-pack. Split a bottle with a loved one. Buy a round for a stranger. Just do it because you can.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- AMENDMENTS -->
+    <section id="18th">
+      <div class="section-divider"><span class="ornament">✦</span></div>
+      <h2 class="section-head"><em>The Law</em>The Amendments</h2>
+
+      <div class="amendments">
+        <div class="amendment" id="18th-text">
+          <h3>The 18th Amendment</h3>
+          <p class="amend-date">Ratified January 16, 1919</p>
+          <section-num>Section 1</section-num>
+          <p>After one year from the ratification of this article the manufacture, sale, or transportation of intoxicating liquors within, the importation thereof into, or the exportation thereof from the United States and all territory subject to the jurisdiction thereof for beverage purposes is hereby prohibited.</p>
+          <section-num>Section 2</section-num>
+          <p>The Congress and the several States shall have concurrent power to enforce this article by appropriate legislation.</p>
+          <section-num>Section 3</section-num>
+          <p>This article shall be inoperative unless it shall have been ratified as an amendment to the Constitution by the legislatures of the several States, as provided in the Constitution, within seven years from the date of the submission hereof to the States by the Congress.</p>
+        </div>
+
+        <div class="amendment repeal" id="21st">
+          <h3>The 21st Amendment</h3>
+          <p class="amend-date">Ratified December 5, 1933</p>
+          <section-num style="color:var(--gold); opacity:0.8;">Section 1</section-num>
+          <p>The eighteenth article of amendment to the Constitution of the United States is hereby repealed.</p>
+          <section-num style="color:var(--gold); opacity:0.8;">Section 2</section-num>
+          <p>The transportation or importation into any State, Territory, or possession of the United States for delivery or use therein of intoxicating liquors, in violation of the laws thereof, is hereby prohibited.</p>
+          <section-num style="color:var(--gold); opacity:0.8;">Section 3</section-num>
+          <p>This article shall be inoperative unless it shall have been ratified as an amendment to the Constitution by conventions in the several States, as provided in the Constitution, within seven years from the date of the submission hereof to the States by the Congress.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <span class="footer-ornament">✦</span>
+    <p>Repeal Day® is a registered trademark of the <a href="http://www.museumoftheamericancocktail.org">Museum of the American Cocktail</a>.<br>No unauthorized use without permission.</p>
+    <p>Contact: <a href="mailto:info@repealday.org">info@repealday.org</a></p>
+    <p style="margin-top: 1rem;">Repeal Day® was created by <a href="http://www.jeffreymorgenthaler.com/category/repeal-day?order=asc">Jeffrey Morgenthaler</a>.</p>
+    <p style="margin-top: 1.5rem; font-size: 0.7rem; opacity: 0.4; letter-spacing: 0.1em; text-transform: uppercase;">The Freedom to Celebrate &nbsp;·&nbsp; Celebrate the Freedom</p>
+  </footer>
+
+</body>
+</html>
