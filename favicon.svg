@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Shadow -->
+  <rect x="3" y="3" width="28" height="28" rx="3" fill="#b4aa96"/>
+  <!-- Card body -->
+  <rect x="2" y="2" width="28" height="28" rx="3" fill="white"/>
+  <!-- Red header -->
+  <rect x="2" y="2" width="28" height="10" rx="3" fill="#7a1010"/>
+  <rect x="2" y="8" width="28" height="4" fill="#7a1010"/>
+  <!-- Tear line -->
+  <line x1="2" y1="12" x2="30" y2="12" stroke="white" stroke-width="0.75" stroke-dasharray="2,2"/>
+  <!-- Ring holes -->
+  <rect x="9" y="1" width="3" height="4" rx="1" fill="#1a1208"/>
+  <rect x="20" y="1" width="3" height="4" rx="1" fill="#1a1208"/>
+  <!-- DEC text -->
+  <text x="16" y="10" font-family="Arial Narrow, Arial, sans-serif" font-size="6" font-weight="700" fill="#f5edd8" text-anchor="middle" letter-spacing="0.5">DEC</text>
+  <!-- Big 5 -->
+  <text x="16" y="24" font-family="Georgia, serif" font-size="18" font-weight="700" fill="#1a1208" text-anchor="middle">5</text>
+  <!-- Card border -->
+  <rect x="2" y="2" width="28" height="28" rx="3" fill="none" stroke="#1a1208" stroke-width="1"/>
+</svg>
