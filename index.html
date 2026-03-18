@@ -487,7 +487,17 @@
       color: var(--red);
       text-decoration: none;
     }
-    .product-info a:hover { text-decoration: underline; }
+    .product-thumb-link {
+      display: block;
+      flex-shrink: 0;
+      line-height: 0;
+      border: none;
+      outline: none;
+    }
+    .product-thumb-link:focus-visible {
+      outline: 3px solid var(--gold-light);
+      outline-offset: 2px;
+    }
     .product-info p {
       font-size: 0.88rem;
       line-height: 1.6;
@@ -627,7 +637,7 @@
       <div class="product-list">
 
         <div class="product-item">
-          <img class="product-thumb" src="the-bar-book.jpg" alt="The Bar Book by Jeffrey Morgenthaler" />
+          <a href="https://amzn.to/3NLXPSD" class="product-thumb-link" target="_blank" rel="noopener"><img class="product-thumb" src="the-bar-book.jpg" alt="The Bar Book by Jeffrey Morgenthaler" /></a>
           <div class="product-info">
             <a href="https://amzn.to/3NLXPSD" target="_blank" rel="noopener">The Bar Book: Elements of Cocktail Technique — Jeffrey Morgenthaler</a>
             <p>The only cocktail book that focuses on how to make drinks rather than just what to put in them. Start here.</p>
@@ -635,7 +645,7 @@
         </div>
 
         <div class="product-item">
-          <img class="product-thumb" src="mixing-glass.png" alt="Cocktail mixing glass" />
+          <a href="https://amzn.to/4bFPwzU" class="product-thumb-link" target="_blank" rel="noopener"><img class="product-thumb" src="mixing-glass.png" alt="Cocktail mixing glass" /></a>
           <div class="product-info">
             <a href="https://amzn.to/4bFPwzU" target="_blank" rel="noopener">Mixing Glass</a>
             <p>A weighted, seamless mixing glass gives you control and stability. Essential for a properly stirred Old Fashioned.</p>
@@ -643,7 +653,7 @@
         </div>
 
         <div class="product-item">
-          <img class="product-thumb" src="bar-spoon.png" alt="Teardrop cocktail spoon" />
+          <a href="https://amzn.to/4lKgBGI" class="product-thumb-link" target="_blank" rel="noopener"><img class="product-thumb" src="bar-spoon.png" alt="Teardrop cocktail spoon" /></a>
           <div class="product-info">
             <a href="https://amzn.to/4lKgBGI" target="_blank" rel="noopener">Teardrop Cocktail Spoon</a>
             <p>A long-handled bar spoon lets you stir with precision and control. The difference between a good stirred drink and a great one.</p>
@@ -651,7 +661,7 @@
         </div>
 
         <div class="product-item">
-          <img class="product-thumb" src="jigger.png" alt="Cocktail Kingdom jigger" />
+          <a href="https://amzn.to/3PfWzHP" class="product-thumb-link" target="_blank" rel="noopener"><img class="product-thumb" src="jigger.png" alt="Cocktail Kingdom jigger" /></a>
           <div class="product-info">
             <a href="https://amzn.to/3PfWzHP" target="_blank" rel="noopener">Jigger</a>
             <p>Measure your pours. Every good bartender does. A well-made jigger is one of those tools you'll use every single time.</p>
@@ -659,7 +669,7 @@
         </div>
 
         <div class="product-item">
-          <img class="product-thumb" src="strainer.png" alt="Julep strainer" />
+          <a href="https://amzn.to/4sYpi2x" class="product-thumb-link" target="_blank" rel="noopener"><img class="product-thumb" src="strainer.png" alt="Julep strainer" /></a>
           <div class="product-info">
             <a href="https://amzn.to/4sYpi2x" target="_blank" rel="noopener">Julep Strainer</a>
             <p>A good Julep strainer keeps the ice where it belongs — in the mixing glass, not the drink.</p>
@@ -667,7 +677,7 @@
         </div>
 
         <div class="product-item">
-          <img class="product-thumb" src="bitters.png" alt="Angostura aromatic and orange bitters" />
+          <a href="https://amzn.to/4sQXM6T" class="product-thumb-link" target="_blank" rel="noopener"><img class="product-thumb" src="bitters.png" alt="Angostura aromatic and orange bitters" /></a>
           <div class="product-info">
             <a href="https://amzn.to/4sQXM6T" target="_blank" rel="noopener">Angostura Aromatic &amp; Orange Bitters</a>
             <p>The aromatic is the backbone of an Old Fashioned. The orange adds a bright, citrusy counterpoint. Keep both on hand and you've covered most classic cocktails.</p>
@@ -675,7 +685,7 @@
         </div>
 
         <div class="product-item">
-          <img class="product-thumb" src="old-fashioned-glasses.png" alt="Old Fashioned glasses" />
+          <a href="https://amzn.to/4uALpgP" class="product-thumb-link" target="_blank" rel="noopener"><img class="product-thumb" src="old-fashioned-glasses.png" alt="Old Fashioned glasses" /></a>
           <div class="product-info">
             <a href="https://amzn.to/4uALpgP" target="_blank" rel="noopener">Spiegelau Old Fashioned Glasses, Set of 4</a>
             <p>A proper rocks glass makes the whole thing feel like an occasion. Which, on December 5th, it is. This set of four means you can invite friends.</p>
@@ -683,7 +693,7 @@
         </div>
 
         <div class="product-item">
-          <img class="product-thumb" src="bar-cart.png" alt="Brass and walnut bar cart" />
+          <a href="https://amzn.to/4bFU1KO" class="product-thumb-link" target="_blank" rel="noopener"><img class="product-thumb" src="bar-cart.png" alt="Brass and walnut bar cart" /></a>
           <div class="product-info">
             <a href="https://amzn.to/4bFU1KO" target="_blank" rel="noopener">Go All In: A Proper Bar Cart</a>
             <p>If Repeal Day has you reconsidering your home bar situation entirely — and it should — a well-chosen bar cart is the move. Stock it right and you'll never be unprepared on December 5th again.</p>
