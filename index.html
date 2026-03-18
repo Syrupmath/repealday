@@ -3,7 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Repeal Day® — December 5th</title>
+  <title>Repeal Day® — December 5th | Celebrate the End of Prohibition</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Repeal Day® is December 5th — the day in 1933 when Prohibition ended and America got its bars back. Learn the history, why we celebrate, and how the holiday was created by bartender Jeffrey Morgenthaler." />
+  <meta name="author" content="Jeffrey Morgenthaler" />
+  <meta name="keywords" content="Repeal Day, December 5th, end of Prohibition, 21st Amendment, Jeffrey Morgenthaler, cocktail holiday, American drinking history" />
+  <link rel="canonical" href="https://repealday.org/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://repealday.org/" />
+  <meta property="og:title" content="Repeal Day® — December 5th" />
+  <meta property="og:description" content="The only holiday written into the Constitution. On December 5th, 1933, Prohibition ended and America raised a glass. Celebrate Repeal Day®." />
+  <meta property="og:image" content="https://repealday.org/utah.jpg" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Repeal Day® — December 5th" />
+  <meta name="twitter:description" content="The only holiday written into the Constitution. Celebrate the end of Prohibition on December 5th." />
+  <meta name="twitter:image" content="https://repealday.org/utah.jpg" />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "Repeal Day®",
+    "description": "An annual celebration of the ratification of the 21st Amendment on December 5th, 1933, which ended Prohibition in the United States. Created by bartender Jeffrey Morgenthaler in 2006.",
+    "startDate": "2026-12-05",
+    "endDate": "2026-12-05",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "location": {
+      "@type": "Place",
+      "name": "Bars, taverns, and homes across the United States",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US"
+      }
+    },
+    "organizer": {
+      "@type": "Person",
+      "name": "Jeffrey Morgenthaler",
+      "url": "https://jeffreymorgenthaler.com"
+    },
+    "url": "https://repealday.org/"
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet" />
@@ -14,10 +63,38 @@
       --ink: #1a1208;
       --paper: #f5edd8;
       --paper-dark: #e8dcc0;
-      --red: #8b1a1a;
-      --gold: #b8860b;
+      --red: #7a1010;        /* darkened for contrast */
+      --gold: #8a6200;       /* darkened for WCAG AA on paper */
+      --gold-light: #b8860b; /* decorative use on dark backgrounds only */
       --rule: #2a1f0e;
-      --muted: #5a4a30;
+      --muted: #3d3020;      /* darkened for contrast on paper-dark */
+    }
+
+    /* ── SKIP LINK ── */
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 1rem;
+      background: var(--ink);
+      color: var(--paper);
+      padding: 0.5rem 1rem;
+      font-family: 'Libre Baskerville', serif;
+      font-size: 0.9rem;
+      z-index: 9999;
+      text-decoration: none;
+      border: 2px solid var(--gold-light);
+    }
+    .skip-link:focus { top: 1rem; }
+
+    /* ── FOCUS STYLES ── */
+    :focus-visible {
+      outline: 3px solid var(--gold-light);
+      outline-offset: 3px;
+    }
+    a:focus-visible {
+      outline: 3px solid var(--gold-light);
+      outline-offset: 2px;
+      border-radius: 2px;
     }
 
     html { scroll-behavior: smooth; }
@@ -58,7 +135,7 @@
       font-size: 0.7rem;
       letter-spacing: 0.25em;
       text-transform: uppercase;
-      color: var(--gold);
+      color: var(--gold-light);
       margin-bottom: 1.2rem;
     }
 
@@ -85,9 +162,9 @@
       display: inline-block;
       font-family: 'IM Fell English', serif;
       font-size: clamp(1.1rem, 3vw, 1.6rem);
-      color: var(--gold);
-      border-top: 1px solid var(--gold);
-      border-bottom: 1px solid var(--gold);
+      color: var(--gold-light);
+      border-top: 1px solid var(--gold-light);
+      border-bottom: 1px solid var(--gold-light);
       padding: 0.4rem 2rem;
       margin-top: 1rem;
       letter-spacing: 0.1em;
@@ -292,10 +369,10 @@
       margin-bottom: 0.4rem;
       line-height: 1.7;
     }
-    footer a { color: var(--gold); text-decoration: none; }
+    footer a { color: var(--gold-light); text-decoration: none; }
     footer a:hover { text-decoration: underline; }
     footer .footer-ornament {
-      color: var(--gold);
+      color: var(--gold-light);
       font-size: 1.5rem;
       margin-bottom: 1rem;
       display: block;
@@ -312,7 +389,7 @@
       flex-wrap: wrap;
     }
     nav a {
-      color: var(--gold);
+      color: var(--gold-light);
       text-decoration: none;
       font-family: 'Libre Baskerville', serif;
       font-size: 0.72rem;
@@ -329,9 +406,14 @@
     .header-inner > * {
       animation: fadeUp 0.8s ease both;
     }
-    .dateline       { animation-delay: 0.1s; }
+    .dateline         { animation-delay: 0.1s; }
     h1.masthead-title { animation-delay: 0.25s; }
-    .masthead-date  { animation-delay: 0.45s; }
+    .masthead-date    { animation-delay: 0.45s; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .header-inner > * { animation: none; }
+      html { scroll-behavior: auto; }
+    }
 
     /* ── BADGE ── */
     .badge {
@@ -378,8 +460,10 @@
 </head>
 <body>
 
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
   <!-- MASTHEAD -->
-  <header>
+  <header role="banner">
     <div class="masthead-rule"></div>
     <div class="header-inner">
       <p class="dateline">Est. December 5, 1933 &nbsp;·&nbsp; A Constitutional Holiday</p>
@@ -395,7 +479,7 @@
   </header>
 
   <!-- NAV -->
-  <nav>
+  <nav aria-label="Page sections">
     <a href="#history">History</a>
     <a href="#celebrate">Why Celebrate</a>
     <a href="#origin">How It Started</a>
@@ -404,23 +488,23 @@
   </nav>
 
   <!-- MAIN CONTENT -->
-  <main>
+  <main id="main-content">
 
     <!-- LEDE -->
-    <div class="lede" style="margin-top: 3rem;">
+    <blockquote class="lede" style="margin-top: 3rem;">
       <p>On December 5th, 1933, America came to its senses and raised a glass. Repeal Day® is the only holiday written directly into the Constitution — and the most honest excuse you'll ever have to go to a bar.</p>
-    </div>
+    </blockquote>
 
     <!-- HISTORY -->
-    <section id="history">
-      <div class="section-divider"><span class="ornament">✦</span></div>
-      <h2 class="section-head"><em>The Story</em>What Is Repeal Day?</h2>
+    <section id="history" aria-labelledby="history-heading">
+      <div class="section-divider" aria-hidden="true"><span class="ornament">✦</span></div>
+      <h2 class="section-head" id="history-heading" aria-label="What Is Repeal Day?"><em aria-hidden="true">The Story</em>What Is Repeal Day?</h2>
 
       <div class="body-text">
         <p>At the turn of the twentieth century, a powerful temperance movement convinced Congress that alcohol was the root cause of most of America's problems — crime, poverty, broken families, you name it. On January 16th, 1919, Congress passed the Eighteenth Amendment and banned it outright. The thinking went that without booze, Americans would be healthier, more productive, and morally improved. It did not go as planned.</p>
 
         <div class="photo-break">
-          <img src="beer.jpeg" alt="Protesters marching with 'We Want Beer' signs during Prohibition" />
+          <img src="beer.jpeg" alt="A large crowd of protesters marching through city streets at night, carrying signs reading 'We Want Beer' during Prohibition in the early 1930s." width="1200" height="675" loading="lazy" />
           <p class="photo-caption">Americans march in protest during Prohibition — a movement that ultimately proved impossible to sustain.</p>
         </div>
 
@@ -432,26 +516,26 @@
       </div>
 
       <div class="photo-break">
-        <img src="utah.jpg" alt="Salt Lake Tribune front page: Utah Vote Ends Prohibition Era, December 6, 1933" />
+        <img src="utah.jpg" alt="Front page of The Salt Lake Tribune dated December 6, 1933, with the headline 'Utah Vote Ends Prohibition Era' and a group photograph of delegates to the Utah constitutional convention." width="1200" height="600" loading="lazy" />
         <p class="photo-caption">The Salt Lake Tribune, December 6, 1933 — the morning after Utah cast the deciding vote.</p>
       </div>
 
       <div class="photo-break">
-        <img src="bar.jpg" alt="Bartender and patrons celebrating the end of Prohibition" />
+        <img src="bar.jpg" alt="A jubilant crowd packed into a bar raising bottles in celebration on the night Prohibition ended, with a bartender in an apron raising his arm in triumph." width="800" height="600" loading="lazy" />
         <p class="photo-caption">Americans celebrate at a bar on the night Prohibition ended.</p>
       </div>
 
     </section>
 
     <!-- PULL QUOTE -->
-    <div class="pull-quote">
+    <blockquote class="pull-quote">
       <p>"The American bartender had been a respected figure in civic life. Prohibition made them a criminal. We celebrate the day that changed."</p>
-    </div>
+    </blockquote>
 
     <!-- WHY CELEBRATE -->
-    <section id="celebrate">
-      <div class="section-divider"><span class="ornament">✦</span></div>
-      <h2 class="section-head"><em>The Case For It</em>Why Do We Celebrate?</h2>
+    <section id="celebrate" aria-labelledby="celebrate-heading">
+      <div class="section-divider" aria-hidden="true"><span class="ornament">✦</span></div>
+      <h2 class="section-head" id="celebrate-heading" aria-label="Why Do We Celebrate?"><em aria-hidden="true">The Case For It</em>Why Do We Celebrate?</h2>
 
       <div class="body-text" style="margin-bottom: 2rem;">
         <p>Those thirteen years took a real toll — not just in crime and corruption, but in something harder to quantify. The craft of fermentation and distillation went underground. The American bartender, who had been a respected figure in civic life, became a criminal. Traditions that had been passed down for generations were interrupted or lost entirely.</p>
@@ -475,9 +559,9 @@
     </section>
 
     <!-- FOUNDER'S NOTE -->
-    <section id="origin">
-      <div class="section-divider"><span class="ornament">✦</span></div>
-      <h2 class="section-head"><em>How It Started</em>The Origin of Repeal Day®</h2>
+    <section id="origin" aria-labelledby="origin-heading">
+      <div class="section-divider" aria-hidden="true"><span class="ornament">✦</span></div>
+      <h2 class="section-head" id="origin-heading" aria-label="The Origin of Repeal Day"><em aria-hidden="true">How It Started</em>The Origin of Repeal Day®</h2>
 
       <div class="body-text">
         <p>It started with a newspaper and a slow night at a bar in Eugene, Oregon. It was December 5th, 2003, and I was behind the stick when one of our regulars glanced at the "On This Day in History" column and mentioned, almost offhandedly, that it was the 70th anniversary of the repeal of Prohibition. I remember thinking: I am a bartender. This is my holiday. Why doesn't anyone celebrate this?</p>
@@ -489,31 +573,25 @@
     </section>
 
     <!-- AMENDMENTS -->
-    <section id="18th">
-      <div class="section-divider"><span class="ornament">✦</span></div>
-      <h2 class="section-head"><em>The Law</em>The Amendments</h2>
+    <section id="18th" aria-labelledby="amendments-heading">
+      <div class="section-divider" aria-hidden="true"><span class="ornament">✦</span></div>
+      <h2 class="section-head" id="amendments-heading" aria-label="The Amendments"><em aria-hidden="true">The Law</em>The Amendments</h2>
 
       <div class="amendments">
-        <div class="amendment" id="18th-text">
+        <div class="amendment">
           <h3>The 18th Amendment</h3>
           <p class="amend-date">Ratified January 16, 1919</p>
-          <section-num>Section 1</section-num>
-          <p>After one year from the ratification of this article the manufacture, sale, or transportation of intoxicating liquors within, the importation thereof into, or the exportation thereof from the United States and all territory subject to the jurisdiction thereof for beverage purposes is hereby prohibited.</p>
-          <section-num>Section 2</section-num>
-          <p>The Congress and the several States shall have concurrent power to enforce this article by appropriate legislation.</p>
-          <section-num>Section 3</section-num>
-          <p>This article shall be inoperative unless it shall have been ratified as an amendment to the Constitution by the legislatures of the several States, as provided in the Constitution, within seven years from the date of the submission hereof to the States by the Congress.</p>
+          <p><strong>Section 1.</strong> After one year from the ratification of this article the manufacture, sale, or transportation of intoxicating liquors within, the importation thereof into, or the exportation thereof from the United States and all territory subject to the jurisdiction thereof for beverage purposes is hereby prohibited.</p>
+          <p><strong>Section 2.</strong> The Congress and the several States shall have concurrent power to enforce this article by appropriate legislation.</p>
+          <p><strong>Section 3.</strong> This article shall be inoperative unless it shall have been ratified as an amendment to the Constitution by the legislatures of the several States, as provided in the Constitution, within seven years from the date of the submission hereof to the States by the Congress.</p>
         </div>
 
         <div class="amendment repeal" id="21st">
           <h3>The 21st Amendment</h3>
           <p class="amend-date">Ratified December 5, 1933</p>
-          <section-num style="color:var(--gold); opacity:0.8;">Section 1</section-num>
-          <p>The eighteenth article of amendment to the Constitution of the United States is hereby repealed.</p>
-          <section-num style="color:var(--gold); opacity:0.8;">Section 2</section-num>
-          <p>The transportation or importation into any State, Territory, or possession of the United States for delivery or use therein of intoxicating liquors, in violation of the laws thereof, is hereby prohibited.</p>
-          <section-num style="color:var(--gold); opacity:0.8;">Section 3</section-num>
-          <p>This article shall be inoperative unless it shall have been ratified as an amendment to the Constitution by conventions in the several States, as provided in the Constitution, within seven years from the date of the submission hereof to the States by the Congress.</p>
+          <p><strong>Section 1.</strong> The eighteenth article of amendment to the Constitution of the United States is hereby repealed.</p>
+          <p><strong>Section 2.</strong> The transportation or importation into any State, Territory, or possession of the United States for delivery or use therein of intoxicating liquors, in violation of the laws thereof, is hereby prohibited.</p>
+          <p><strong>Section 3.</strong> This article shall be inoperative unless it shall have been ratified as an amendment to the Constitution by conventions in the several States, as provided in the Constitution, within seven years from the date of the submission hereof to the States by the Congress.</p>
         </div>
       </div>
     </section>
@@ -521,9 +599,13 @@
   </main>
 
   <!-- FOOTER -->
-  <footer>
-    <span class="footer-ornament">✦</span>
+  <footer role="contentinfo">
+    <span class="footer-ornament" aria-hidden="true">✦</span>
     <p>Repeal Day® is a registered trademark of the <a href="http://www.museumoftheamericancocktail.org">Museum of the American Cocktail</a>.<br>No unauthorized use without permission.</p>
-    <p>Contact: <a href="/cdn-cgi/l/email-protection#a9c0c7cfc6e9dbccd9ccc8c5cdc8d087c6dbce"><span class="__cf_email__" data-cfemail="4e272028210e3c2b3e2b2f222a2f3760213c29">[email&#160;protected]</span></a></p>
-    <p style="margin-top: 1rem;">Repeal Day® was created by <a href="http://www.jeffreymorgenthaler.com/category/repeal-day?order=asc">Jeffrey Morgenthaler</a>.</p>
-    <p style="margin-top: 1.5rem; font-size: 0.7rem; opacity: 0.4; letter-spacin
+    <p>Contact: <a href="mailto:info@repealday.org">info@repealday.org</a></p>
+    <p style="margin-top: 1rem;">Repeal Day® was created by <a href="https://jeffreymorgenthaler.com/category/repeal-day?order=asc">Jeffrey Morgenthaler</a>.</p>
+    <p style="margin-top: 1.5rem; font-size: 0.7rem; opacity: 0.4; letter-spacing: 0.1em; text-transform: uppercase;">The Freedom to Celebrate &nbsp;·&nbsp; Celebrate the Freedom</p>
+  </footer>
+
+</body>
+</html>
