@@ -456,24 +456,23 @@
     /* ── PRODUCTS ── */
     .product-list {
       margin: 2rem 0;
-      display: flex;
-      flex-direction: column;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       gap: 1.25rem;
+    }
+    @media (max-width: 600px) {
+      .product-list { grid-template-columns: 1fr; }
     }
     .product-item {
       display: flex;
-      gap: 1.25rem;
+      gap: 1rem;
       align-items: flex-start;
-      border-bottom: 1px solid rgba(42,31,14,0.12);
-      padding-bottom: 1.25rem;
-    }
-    .product-item:last-child {
-      border-bottom: none;
-      padding-bottom: 0;
+      border: 1px solid rgba(42,31,14,0.12);
+      padding: 1rem;
     }
     .product-thumb {
-      width: 72px;
-      height: 72px;
+      width: 80px;
+      height: 80px;
       object-fit: contain;
       flex-shrink: 0;
       mix-blend-mode: multiply;
@@ -492,22 +491,6 @@
       line-height: 1.6;
       margin-top: 0.2rem;
       color: var(--muted);
-    }
-    .product-splurge {
-      background: var(--paper-dark);
-      border-top: 4px solid var(--gold);
-      padding: 1.5rem;
-      margin-top: 2rem;
-      display: flex;
-      gap: 1.25rem;
-      align-items: flex-start;
-    }
-    .product-splurge .product-info a {
-      font-size: 1.05rem;
-    }
-    .product-splurge .product-thumb {
-      width: 90px;
-      height: 90px;
     }
 
     /* ── RESPONSIVE ── */
@@ -699,12 +682,14 @@
 
       </div>
 
-      <div class="product-splurge">
-        <img class="product-thumb" src="bar-cart.png" alt="Brass and walnut bar cart" />
-        <div class="product-info">
-          <a href="https://amzn.to/4bFU1KO" target="_blank" rel="noopener">Go All In: A Proper Bar Cart</a>
-          <p>If Repeal Day has you reconsidering your home bar situation entirely — and it should — a well-chosen bar cart is the move. Stock it right and you'll never be unprepared on December 5th again.</p>
+        <div class="product-item">
+          <img class="product-thumb" src="bar-cart.png" alt="Brass and walnut bar cart" />
+          <div class="product-info">
+            <a href="https://amzn.to/4bFU1KO" target="_blank" rel="noopener">Go All In: A Proper Bar Cart</a>
+            <p>If Repeal Day has you reconsidering your home bar situation entirely — and it should — a well-chosen bar cart is the move. Stock it right and you'll never be unprepared on December 5th again.</p>
+          </div>
         </div>
+
       </div>
 
     </section>
