@@ -385,11 +385,15 @@
     /* ── NAV ── */
     nav {
       background: var(--rule);
-      border-bottom: 2px solid var(--gold);
-      padding: 0.6rem 1.5rem;
+      border-bottom: 2px solid var(--gold-light);
+      position: relative;
+    }
+    .nav-inner {
       display: flex;
       justify-content: center;
+      align-items: center;
       gap: 2.5rem;
+      padding: 0.6rem 1.5rem;
       flex-wrap: wrap;
     }
     nav a {
@@ -401,6 +405,65 @@
       letter-spacing: 0.2em;
     }
     nav a:hover { color: var(--paper); }
+
+    /* Hamburger button — hidden on desktop */
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.75rem 1rem;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--gold-light);
+      font-family: 'Libre Baskerville', serif;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+    }
+    .nav-toggle:focus-visible {
+      outline: 3px solid var(--gold-light);
+    }
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--gold-light);
+      transition: all 0.25s ease;
+    }
+    .nav-toggle.open .hamburger span:nth-child(1) {
+      transform: translateY(6px) rotate(45deg);
+    }
+    .nav-toggle.open .hamburger span:nth-child(2) {
+      opacity: 0;
+    }
+    .nav-toggle.open .hamburger span:nth-child(3) {
+      transform: translateY(-6px) rotate(-45deg);
+    }
+
+    @media (max-width: 680px) {
+      .nav-toggle { display: flex; }
+      .nav-inner {
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+        text-align: center;
+      }
+      .nav-inner.open { display: flex; }
+      .nav-inner a {
+        display: block;
+        padding: 0.9rem 1rem;
+        border-top: 1px solid rgba(184,134,11,0.2);
+        width: 100%;
+      }
+    }
 
     /* ── ENTRANCE ANIMATION ── */
     @keyframes fadeUp {
@@ -514,7 +577,21 @@
     /* ── RESPONSIVE ── */
     @media (max-width: 600px) {
       .lede { padding: 1.75rem 1.25rem; }
+      .lede::before { font-size: 5rem; opacity: 0.15; }
       main { padding: 0 1rem 3rem; }
+      .photo-break { margin: 2rem -1rem; }
+      .body-text p:first-child::first-letter {
+        font-size: 2.8rem;
+      }
+      .pull-quote p {
+        font-size: 1rem;
+      }
+      h2.section-head {
+        font-size: 1.6rem;
+      }
+      .amendments {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -539,11 +616,19 @@
 
   <!-- NAV -->
   <nav aria-label="Page sections">
-    <a href="#history">History</a>
-    <a href="#origin">How It Started</a>
-    <a href="#celebrate">Why Celebrate</a>
-    <a href="#how-to-celebrate">Shop</a>
-    <a href="#18th">The Amendments</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" onclick="this.classList.toggle('open'); this.setAttribute('aria-expanded', this.classList.contains('open')); document.getElementById('nav-links').classList.toggle('open');">
+      Menu
+      <span class="hamburger" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </span>
+    </button>
+    <div class="nav-inner" id="nav-links">
+      <a href="#history">History</a>
+      <a href="#origin">How It Started</a>
+      <a href="#celebrate">Why Celebrate</a>
+      <a href="#how-to-celebrate">Shop</a>
+      <a href="#18th">The Amendments</a>
+    </div>
   </nav>
 
   <!-- MAIN CONTENT -->
@@ -741,4 +826,18 @@
     <span class="footer-ornament" aria-hidden="true">✦</span>
     <p>Repeal Day® is a registered trademark of the <a href="http://www.museumoftheamericancocktail.org">Museum of the American Cocktail</a> — held in trust to protect the holiday from commercial exploitation, not to stop you from throwing a party. Bars, restaurants, and individuals are encouraged to celebrate freely. For large-scale commercial use, please <a href="https://jeffreymorgenthaler.com/contact/">get in touch</a>.</p>
     <p>Repeal Day® was created by <a href="https://jeffreymorgenthaler.com/repeal-day-is-december-5th/">Jeffrey Morgenthaler</a>.</p>
-    <p style="margin-top: 1.5rem; font
+    <p style="margin-top: 1.5rem; font-size: 0.7rem; opacity: 0.4; letter-spacing: 0.1em; text-transform: uppercase;">The Freedom to Celebrate &nbsp;·&nbsp; Celebrate the Freedom</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('#nav-links a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        document.getElementById('nav-links').classList.remove('open');
+        var toggle = document.querySelector('.nav-toggle');
+        toggle.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+</body>
+</html>
