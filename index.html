@@ -65,14 +65,13 @@
       --ink: #1a1208;
       --paper: #f5edd8;
       --paper-dark: #e8dcc0;
-      --red: #7a1010;        /* darkened for contrast */
-      --gold: #8a6200;       /* darkened for WCAG AA on paper */
-      --gold-light: #b8860b; /* decorative use on dark backgrounds only */
+      --red: #7a1010;
+      --gold: #8a6200;
+      --gold-light: #b8860b;
       --rule: #2a1f0e;
-      --muted: #3d3020;      /* darkened for contrast on paper-dark */
+      --muted: #3d3020;
     }
 
-    /* ── SKIP LINK ── */
     .skip-link {
       position: absolute;
       top: -100%;
@@ -88,7 +87,6 @@
     }
     .skip-link:focus { top: 1rem; }
 
-    /* ── FOCUS STYLES ── */
     :focus-visible {
       outline: 3px solid var(--gold-light);
       outline-offset: 3px;
@@ -107,11 +105,9 @@
       font-family: 'Libre Baskerville', Georgia, serif;
       font-size: 17px;
       line-height: 1.75;
-      background-image:
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
     }
 
-    /* ── MASTHEAD ── */
     header {
       background-color: var(--ink);
       color: var(--paper);
@@ -125,12 +121,9 @@
     .masthead-rule {
       height: 3px;
       background: repeating-linear-gradient(90deg, var(--gold) 0, var(--gold) 8px, transparent 8px, transparent 14px);
-      margin: 0;
     }
 
-    .header-inner {
-      padding: 3rem 2rem 2.5rem;
-    }
+    .header-inner { padding: 3rem 2rem 2.5rem; }
 
     .dateline {
       font-family: 'Libre Baskerville', serif;
@@ -172,14 +165,12 @@
       letter-spacing: 0.1em;
     }
 
-    /* ── MAIN LAYOUT ── */
     main {
       max-width: 860px;
       margin: 0 auto;
       padding: 0 1.5rem 4rem;
     }
 
-    /* ── SECTION RULES ── */
     .section-divider {
       display: flex;
       align-items: center;
@@ -200,11 +191,10 @@
       line-height: 1;
     }
 
-    /* ── LEDE BLOCK ── */
     .lede {
       background-color: var(--ink);
       color: var(--paper);
-      padding: 2.5rem 2.5rem;
+      padding: 2.5rem;
       margin: 2.5rem 0;
       border-left: 5px solid var(--red);
       position: relative;
@@ -227,7 +217,6 @@
       font-style: italic;
     }
 
-    /* ── BODY TEXT ── */
     .body-text p {
       margin-bottom: 1.4rem;
       text-align: justify;
@@ -243,7 +232,6 @@
       color: var(--red);
     }
 
-    /* ── PULL QUOTE ── */
     .pull-quote {
       border-top: 3px solid var(--rule);
       border-bottom: 3px solid var(--rule);
@@ -259,7 +247,6 @@
       color: var(--red);
     }
 
-    /* ── REASONS GRID ── */
     .reasons {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -286,15 +273,11 @@
       color: var(--muted);
     }
 
-    /* ── AMENDMENTS ── */
     .amendments {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 1.5rem;
       margin: 2rem 0;
-    }
-    @media (max-width: 600px) {
-      .amendments { grid-template-columns: 1fr; }
     }
     .amendment {
       border: 1px solid rgba(42,31,14,0.25);
@@ -321,16 +304,6 @@
       margin-bottom: 1.2rem;
       opacity: 0.6;
     }
-    .amendment section-num {
-      display: block;
-      font-family: 'Playfair Display', serif;
-      font-weight: 700;
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin: 1rem 0 0.3rem;
-      opacity: 0.55;
-    }
     .amendment p {
       font-size: 0.9rem;
       line-height: 1.65;
@@ -339,7 +312,6 @@
     .amendment p:last-child { margin-bottom: 0; }
     .amendment.repeal p { opacity: 0.85; }
 
-    /* ── SECTION HEADINGS ── */
     h2.section-head {
       font-family: 'Playfair Display', serif;
       font-size: clamp(1.6rem, 4vw, 2.4rem);
@@ -359,7 +331,6 @@
       margin-bottom: 0.25rem;
     }
 
-    /* ── FOOTER ── */
     footer {
       background: var(--ink);
       color: var(--paper);
@@ -382,7 +353,6 @@
       display: block;
     }
 
-    /* ── NAV ── */
     nav {
       background: var(--rule);
       border-bottom: 2px solid var(--gold-light);
@@ -406,7 +376,6 @@
     }
     nav a:hover { color: var(--paper); }
 
-    /* Hamburger button — hidden on desktop */
     .nav-toggle {
       display: none;
       background: none;
@@ -422,14 +391,8 @@
       text-transform: uppercase;
       letter-spacing: 0.2em;
     }
-    .nav-toggle:focus-visible {
-      outline: 3px solid var(--gold-light);
-    }
-    .hamburger {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }
+    .nav-toggle:focus-visible { outline: 3px solid var(--gold-light); }
+    .hamburger { display: flex; flex-direction: column; gap: 4px; }
     .hamburger span {
       display: block;
       width: 22px;
@@ -437,15 +400,9 @@
       background: var(--gold-light);
       transition: all 0.25s ease;
     }
-    .nav-toggle.open .hamburger span:nth-child(1) {
-      transform: translateY(6px) rotate(45deg);
-    }
-    .nav-toggle.open .hamburger span:nth-child(2) {
-      opacity: 0;
-    }
-    .nav-toggle.open .hamburger span:nth-child(3) {
-      transform: translateY(-6px) rotate(-45deg);
-    }
+    .nav-toggle.open .hamburger span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+    .nav-toggle.open .hamburger span:nth-child(2) { opacity: 0; }
+    .nav-toggle.open .hamburger span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
 
     @media (max-width: 680px) {
       .nav-toggle { display: flex; }
@@ -465,14 +422,11 @@
       }
     }
 
-    /* ── ENTRANCE ANIMATION ── */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(20px); }
       to   { opacity: 1; transform: translateY(0); }
     }
-    .header-inner > * {
-      animation: fadeUp 0.8s ease both;
-    }
+    .header-inner > * { animation: fadeUp 0.8s ease both; }
     .dateline         { animation-delay: 0.1s; }
     h1.masthead-title { animation-delay: 0.25s; }
     .masthead-date    { animation-delay: 0.45s; }
@@ -482,21 +436,6 @@
       html { scroll-behavior: auto; }
     }
 
-    /* ── BADGE ── */
-    .badge {
-      display: inline-block;
-      background: var(--red);
-      color: var(--paper);
-      font-family: 'Playfair Display', serif;
-      font-size: 0.72rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      padding: 0.25rem 0.8rem;
-      margin-bottom: 1rem;
-    }
-
-    /* ── IMAGES ── */
     .photo-break {
       margin: 2.5rem -1.5rem;
       position: relative;
@@ -520,7 +459,6 @@
       letter-spacing: 0.03em;
     }
 
-    /* ── PRODUCTS ── */
     .product-list {
       margin: 2rem 0;
       display: grid;
@@ -556,6 +494,7 @@
       line-height: 1.2;
       display: block;
     }
+    .product-info a:hover { text-decoration: underline; }
     .product-thumb-link {
       display: block;
       flex-shrink: 0;
@@ -574,24 +513,15 @@
       color: var(--muted);
     }
 
-    /* ── RESPONSIVE ── */
     @media (max-width: 600px) {
       .lede { padding: 1.75rem 1.25rem; }
       .lede::before { font-size: 5rem; opacity: 0.15; }
       main { padding: 0 1rem 3rem; }
       .photo-break { margin: 2rem -1rem; }
-      .body-text p:first-child::first-letter {
-        font-size: 2.8rem;
-      }
-      .pull-quote p {
-        font-size: 1rem;
-      }
-      h2.section-head {
-        font-size: 1.6rem;
-      }
-      .amendments {
-        grid-template-columns: 1fr;
-      }
+      .body-text p:first-child::first-letter { font-size: 2.8rem; }
+      .pull-quote p { font-size: 1rem; }
+      h2.section-head { font-size: 1.6rem; }
+      .amendments { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -599,7 +529,6 @@
 
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <!-- MASTHEAD -->
   <header role="banner">
     <div class="masthead-rule"></div>
     <div class="header-inner">
@@ -614,7 +543,6 @@
     <div class="masthead-rule"></div>
   </header>
 
-  <!-- NAV -->
   <nav aria-label="Page sections">
     <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" onclick="this.classList.toggle('open'); this.setAttribute('aria-expanded', this.classList.contains('open')); document.getElementById('nav-links').classList.toggle('open');">
       Menu
@@ -631,76 +559,56 @@
     </div>
   </nav>
 
-  <!-- MAIN CONTENT -->
   <main id="main-content">
 
-    <!-- LEDE -->
     <blockquote class="lede" style="margin-top: 3rem;">
       <p>On December 5th, 1933, America came to its senses and raised a glass. Repeal Day® is the only drinking holiday with its own constitutional amendment — and the only time in American history the Constitution was amended to <strong>return</strong> a right.</p>
     </blockquote>
 
-    <!-- HISTORY -->
     <section id="history" aria-labelledby="history-heading">
       <div class="section-divider" aria-hidden="true"><span class="ornament">✦</span></div>
       <h2 class="section-head" id="history-heading" aria-label="What Is Repeal Day?"><em aria-hidden="true">The Story</em>What Is Repeal Day?</h2>
-
       <div class="body-text">
         <p>At the turn of the twentieth century, a powerful temperance movement convinced Congress that alcohol was the root cause of most of America's problems — crime, poverty, broken families, you name it. On January 16th, 1919, Congress passed the Eighteenth Amendment and banned it outright. The thinking went that without booze, Americans would be healthier, more productive, and morally improved. It did not go as planned.</p>
-
         <div class="photo-break">
           <img src="beer.jpeg" alt="A large crowd of protesters marching through city streets at night, carrying signs reading 'We Want Beer' during Prohibition in the early 1930s." loading="lazy" />
           <p class="photo-caption">Americans march in protest during Prohibition — a movement that ultimately proved impossible to sustain.</p>
         </div>
-
         <p>Prohibition made things considerably worse. Organized crime stepped in to fill the void left by legitimate bars and distilleries. Bootleg liquor flooded the country. Speakeasies outnumbered the saloons they replaced. Respect for the law eroded. The federal government had effectively handed a thriving industry to gangsters, and everyone knew it.</p>
-
         <p>By the late 1920s, even many of Prohibition's original supporters had turned. Repeal organizations multiplied. In 1932, Franklin Delano Roosevelt ran for President on a platform that included ending Prohibition — and won in a landslide.</p>
-
         <div class="photo-break">
           <img src="utah.jpg" alt="Front page of The Salt Lake Tribune dated December 6, 1933, with the headline 'Utah Vote Ends Prohibition Era' and a group photograph of delegates to the Utah constitutional convention." loading="lazy" />
           <p class="photo-caption">The Salt Lake Tribune, December 6, 1933 — the morning after Utah cast the deciding vote.</p>
         </div>
-
         <p>On December 5th, 1933, Utah became the final state needed to ratify the 21st Amendment, and just like that, Prohibition was over. America got its bars back. By 1966, not a single state had laws banning alcohol. December 5th was a very good day.</p>
       </div>
-
     </section>
 
-    <!-- PULL QUOTE -->
     <blockquote class="pull-quote">
       <p>"For as long as civilization has existed, people have gathered together to enjoy a drink — and at their center has always stood the bartender: trusted host and confidant, skilled artist and craftsperson, and keeper of the communal hearth. Prohibition made that position a crime. Repeal Day® is the day we celebrate their return."</p>
     </blockquote>
 
-    <!-- HOW IT STARTED -->
     <section id="origin" aria-labelledby="origin-heading">
       <div class="section-divider" aria-hidden="true"><span class="ornament">✦</span></div>
       <h2 class="section-head" id="origin-heading" aria-label="The Origin of Repeal Day"><em aria-hidden="true">How It Started</em>The Origin of Repeal Day®</h2>
-
       <div class="body-text">
         <p><a href="https://jeffreymorgenthaler.com/about/" style="color: var(--red);">My name is Jeffrey Morgenthaler. I'm a bartender living in Portland, Oregon.</a> It was December 5th, 2003, and I was working a quiet night at a bar in my old hometown of Eugene when one of our regulars glanced up from his newspaper and mentioned, almost offhandedly, that it was the 70th anniversary of the repeal of Prohibition. Something clicked. "I'm a bartender," I thought. "This feels like a holiday specifically tailored to me, my peers, and anyone who can legally enjoy a drink. Why aren't we celebrating this as a country?"</p>
-
         <p>The following year I gathered a group of fellow bartenders, and we spent December 5th hopping from bar to bar, spreading the word around town. The year after that we did it again, with more revelers, and more bars. A tradition was taking shape.</p>
-
         <p>Then in 2006, I finally <a href="https://jeffreymorgenthaler.com/repeal-day-is-december-5th/" style="color: var(--red);">wrote about it on my website</a> — and the response was immediate. Repeal Day® had arrived.</p>
       </div>
-
       <div class="photo-break">
         <img src="bar.jpg" alt="A jubilant crowd packed into a bar raising bottles in celebration on the night Prohibition ended, with a bartender in an apron raising his arm in triumph." loading="lazy" />
         <p class="photo-caption">Americans celebrate at a bar on the night Prohibition ended.</p>
       </div>
-
     </section>
 
-    <!-- WHY CELEBRATE -->
     <section id="celebrate" aria-labelledby="celebrate-heading">
       <div class="section-divider" aria-hidden="true"><span class="ornament">✦</span></div>
       <h2 class="section-head" id="celebrate-heading" aria-label="Why Do We Celebrate?"><em aria-hidden="true">The Case For It</em>Why Do We Celebrate?</h2>
-
       <div class="body-text" style="margin-bottom: 2rem;">
-        <p>Those thirteen years took a real toll — not just in crime and corruption, but in something harder to quantify. The craft of fermentation and distillation went underground. The American bartender, who had been a respected figure in civic life, became a criminal. Traditions that had been passed down for generations were interrupted or lost entirely.</p>
-        <p>We celebrate Repeal Day® because December 5th marks the restoration of all of that. The craft. The culture. The bartender's place as a contributor to the culinary arts. And the simple, constitutional right to have a drink with friends.</p>
+        <p>The thirteen years of Prohibition were a dark time for the United States, as the criminalization of alcohol led not only to a rise in civil delinquency and organized crime, but also to the loss of customs associated with the production, preparation, and consumption of alcohol.</p>
+        <p>We celebrate Repeal Day® because December 5th marks a return to the rich traditions of craft fermentation and distillation, the legitimacy of the American bartender as a contributor to the culinary arts, and the responsible enjoyment of alcohol as a sacred social custom.</p>
       </div>
-
       <div class="reasons">
         <div class="reason-card">
           <h3>The Timing Is Perfect</h3>
@@ -717,17 +625,13 @@
       </div>
     </section>
 
-    <!-- HOW TO CELEBRATE -->
     <section id="how-to-celebrate" aria-labelledby="celebrate-how-heading">
       <div class="section-divider" aria-hidden="true"><span class="ornament">✦</span></div>
       <h2 class="section-head" id="celebrate-how-heading" aria-label="How to Celebrate"><em aria-hidden="true">Make It Official</em>How to Celebrate</h2>
-
       <div class="body-text" style="margin-bottom: 1.5rem;">
         <p>The simplest way to mark the occasion is also the most fitting: make a proper Old Fashioned at home. It's the cocktail that survived Prohibition in spirit if not in practice — a straightforward mix of whiskey, bitters, sugar, and ice that rewards good technique and good tools. Here's everything you need.</p>
       </div>
-
       <div class="product-list">
-
         <div class="product-item">
           <a href="https://amzn.to/3NLXPSD" class="product-thumb-link" target="_blank" rel="noopener"><img class="product-thumb" src="the-bar-book.jpg" alt="The Bar Book by Jeffrey Morgenthaler" /></a>
           <div class="product-info">
@@ -735,7 +639,6 @@
             <p>The only cocktail book that focuses on how to make drinks rather than just what to put in them. Start here.</p>
           </div>
         </div>
-
         <div class="product-item">
           <a href="https://amzn.to/4bFPwzU" class="product-thumb-link" target="_blank" rel="noopener"><img class="product-thumb" src="mixing-glass.png" alt="Cocktail mixing glass" /></a>
           <div class="product-info">
@@ -743,7 +646,6 @@
             <p>A weighted, seamless mixing glass gives you control and stability. Essential for a properly stirred Old Fashioned.</p>
           </div>
         </div>
-
         <div class="product-item">
           <a href="https://amzn.to/4lKgBGI" class="product-thumb-link" target="_blank" rel="noopener"><img class="product-thumb" src="bar-spoon.png" alt="Teardrop cocktail spoon" /></a>
           <div class="product-info">
@@ -751,7 +653,6 @@
             <p>A long-handled bar spoon lets you stir with precision and control. The difference between a good stirred drink and a great one.</p>
           </div>
         </div>
-
         <div class="product-item">
           <a href="https://amzn.to/3PfWzHP" class="product-thumb-link" target="_blank" rel="noopener"><img class="product-thumb" src="jigger.png" alt="Cocktail Kingdom jigger" /></a>
           <div class="product-info">
@@ -759,7 +660,6 @@
             <p>Measure your pours. Every good bartender does. A well-made jigger is one of those tools you'll use every single time.</p>
           </div>
         </div>
-
         <div class="product-item">
           <a href="https://amzn.to/4sYpi2x" class="product-thumb-link" target="_blank" rel="noopener"><img class="product-thumb" src="strainer.png" alt="Julep strainer" /></a>
           <div class="product-info">
@@ -767,7 +667,6 @@
             <p>A good Julep strainer keeps the ice where it belongs — in the mixing glass, not the drink.</p>
           </div>
         </div>
-
         <div class="product-item">
           <a href="https://amzn.to/4sQXM6T" class="product-thumb-link" target="_blank" rel="noopener"><img class="product-thumb" src="bitters.png" alt="Angostura aromatic and orange bitters" /></a>
           <div class="product-info">
@@ -775,7 +674,6 @@
             <p>The aromatic is the backbone of an Old Fashioned. The orange adds a bright, citrusy counterpoint. Keep both on hand and you've covered most classic cocktails.</p>
           </div>
         </div>
-
         <div class="product-item">
           <a href="https://amzn.to/4uALpgP" class="product-thumb-link" target="_blank" rel="noopener"><img class="product-thumb" src="old-fashioned-glasses.png" alt="Old Fashioned glasses" /></a>
           <div class="product-info">
@@ -783,7 +681,6 @@
             <p>A proper rocks glass makes the whole thing feel like an occasion. Which, on December 5th, it is. This set of four means you can invite friends.</p>
           </div>
         </div>
-
         <div class="product-item">
           <a href="https://amzn.to/4bFU1KO" class="product-thumb-link" target="_blank" rel="noopener"><img class="product-thumb" src="bar-cart.png" alt="Brass and walnut bar cart" /></a>
           <div class="product-info">
@@ -791,16 +688,12 @@
             <p>If Repeal Day has you reconsidering your home bar situation entirely — and it should — a well-chosen bar cart is the move. Stock it right and you'll never be unprepared on December 5th again.</p>
           </div>
         </div>
-
       </div>
-
     </section>
 
-    <!-- AMENDMENTS -->
     <section id="18th" aria-labelledby="amendments-heading">
       <div class="section-divider" aria-hidden="true"><span class="ornament">✦</span></div>
       <h2 class="section-head" id="amendments-heading" aria-label="The Amendments"><em aria-hidden="true">The Law</em>The Amendments</h2>
-
       <div class="amendments">
         <div class="amendment">
           <h3>The 18th Amendment</h3>
@@ -809,7 +702,6 @@
           <p><strong>Section 2.</strong> The Congress and the several States shall have concurrent power to enforce this article by appropriate legislation.</p>
           <p><strong>Section 3.</strong> This article shall be inoperative unless it shall have been ratified as an amendment to the Constitution by the legislatures of the several States, as provided in the Constitution, within seven years from the date of the submission hereof to the States by the Congress.</p>
         </div>
-
         <div class="amendment repeal" id="21st">
           <h3>The 21st Amendment</h3>
           <p class="amend-date">Ratified December 5, 1933</p>
@@ -822,7 +714,6 @@
 
   </main>
 
-  <!-- FOOTER -->
   <footer role="contentinfo">
     <span class="footer-ornament" aria-hidden="true">✦</span>
     <p>Repeal Day® is a registered trademark of the Museum of the American Cocktail — held in trust to protect the holiday from commercial exploitation, not to stop you from throwing a party. Bars, restaurants, and individuals are encouraged to celebrate freely. For large-scale commercial use, please <a href="https://jeffreymorgenthaler.com/contact/">get in touch</a>.</p>
